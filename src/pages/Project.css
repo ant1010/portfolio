@@ -1,0 +1,20 @@
+
+.project-container{
+    height:100vh;
+    
+    
+    color: #FFFF;
+    
+  
+    padding-top:13vh;
+}
+.bubble2{
+    position: absolute;
+    left:5%;
+    height:80vh;
+    width:90vw;
+    border-radius: 1em;
+    background-color: #8CABBE;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.9;
+}
