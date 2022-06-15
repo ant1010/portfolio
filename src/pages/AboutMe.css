@@ -1,85 +1,132 @@
 .about-container{
     height:100vh;
    
-    padding-top:13vh;
+    padding-top:7.5vh;
     
-    color: #EADEDA;
+    background-color: white;
    
-   
 }
-.bubble{
-    position: absolute;
-    left:5%;
-    height:80vh;
-    width:90vw;
-    border-radius: 1em;
-    background-color: #9D858D;
-    background-image: linear-gradient(180deg,#9D858D, #9D858D);
-    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    opacity: 0.7;
-}
+@font-face {
+  font-family: "Sono";
+  src: 
+         
+         url('Sono-ExtraBold.woff2') format('woff2'); /* Modern Browsers */
+             font-style: normal;
+    font-weight:bold;
+    text-rendering: optimizeLegibility;
 
-
-@keyframes cresent{
-  0%{
-    transform: translate(-30px, 30px) scale(0.9);
-    box-shadow: none;
-  }
-  50%{
-    transform: translate(0px, 0px) scale(1.02);
-    box-shadow: 0 0 10px lighten(#C7938B, 30%), 0 0 80px 8px #C7938B;
-    background-color: #efdbd8;
-  }
-  100%{
-    transform: translate(30px, -30px) scale(0.9);
-    box-shadow: none;
-  }
-}
-
-html{
-  box-sizing: border-box;
-}
-
-*,*::after, *::before{
-  box-sizing: inherit;
-}
-
-html,body{
-  height: 100%;
-}
-
-body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(30deg, #182C51, darken(#182C51, 13%));
-  overflow: hidden;
-}
-
-.moon{
-  background-image: linear-gradient(30deg, darken(#182C51,4.6%), darken(#182C51, 8.3%));
-  width: 256px;
-  height: 256px;
-  border-radius: 50%;
-  position: relative;
   
 }
-.moon::before{
-    content: '';
-    background-color: #C7938B;
+
+.bubble{
+    display: flex;
+    justify-content: center;
     position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    z-index: -1;
-    animation: 3.2s cresent linear infinite alternate;
-  }
+    left:5%;
+    height:90vh;
+    width:90vw;
+    border-radius: .1em;
+    background-color: #8CABBE;
+    background-image: linear-gradient(180deg,#7FB06990, #7FB06990);
+    font-family: "Sono";
+    font-weight:200;
+    color:#F5F5F7;
+    font-size: 5em;
+}
 
+@font-face {
+  font-family: "SonoLight";
+  src: 
+         url('Sono-SansLight.woff2') format('woff2'); /* Modern Browsers */
+       
+             font-style: normal;
+    font-weight:light;
+    text-rendering: optimizeLegibility;
 
-@media (max-width: 768px) {
-  .moon{
-    width: 160px;
-    height: 160px;
+  
+}
+
+.ml6 {
+  font-weight: 700;
+  font-size:clamp(12px, 8vw, 50px);
+  
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.ml6 .text-wrapper {
+  padding: 0.5em;
+  overflow: hidden;
+  height:8vw;
+  max-height:90px;
+  width:80vw;
+  max-width:800px;
+  border-radius:1rem;
+  background-color: rgb(63, 100, 27);
+  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 35%);
+  -webkit-text-size-adjust: none;
+  text-size-adjust: auto;
+}
+
+.description{
+  position: relative;
+  padding:0.5em;
+  font-family: "SonoLight";
+  color:black;
+  font-size:clamp(12px, 5vw, 36px);
+  display:block;
+  overflow: auto;
+  width:35vw;
+  background-color: rgb(202, 214, 189);
+  border-radius:1.5rem;
+  left:-10vw; top:15vh; 
+  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 /65%);
+  animation: mymove 4s;
+  animation-delay: 0s;
+  vertical-align: middle;
+}
+.text2{
+  left:-15vw; top:25vh; 
+  background-color: beige;
+  
+}
+.text3{
+  left:-10vw; top:35vh;
+  background-color: aqua;
+}
+@keyframes mymove {
+  from {left:0px;opacity:0; border-radius:0.5rem}
+  to {opacity:1;}
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+@media only screen and (max-width: 600px) {
+  .bubble{
+    height: 75vh;
   }
+  .ml6 {
+   
+    font-weight: 700;
+    font-size: 2.1rem;
+  }
+  .ml6 .text-wrapper {
+    height:10vh;
+    width:60vw; 
+  }
+  .description{
+     left:-6vw; top:9vh;
+     font-size: 1.5rem;
+     height:5vh;
+     width:60vw;
+     padding-top:10px;
+   }
+   .text2{
+    left:23vw; top:20vh;
+   }
+   .text3{
+    left:-6vw; top:30vh;
+   }
 }

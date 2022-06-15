@@ -77,32 +77,34 @@ li {
 li:hover {
   text-decoration: underline;
 } */
+@font-face {
+  font-family: "Sono";
+  src: 
+         url('pages/Sono-SansLight.woff2') format('woff2'), /* Modern Browsers */
+         url('pages/Sono-ExtraBold.woff2') format('woff2'); /* Modern Browsers */
+             font-style: normal;
+    font-weight:bold;
+    text-rendering: optimizeLegibility;
+
+  
+}
+
 body {
  
   background:rgba(0, 0, 0, 0.15) ;
   color: rgb(233, 104, 104);
   height: 100vh;
-  
+ 
   
 }
 
 .page{
   width:100vw;
-  background-color: rgb(255, 255, 255);
+  
 
 }
 
-#myVideo{
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-}
+
 #root{
   width: 100%;
   height: 100%;
@@ -110,6 +112,7 @@ body {
   overflow-y: scroll; 
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+ 
 }
 
 .navbar {
@@ -119,7 +122,7 @@ body {
   display: flex;
   width: 100%;
   height: 50px;
-  background-color:rgba(0, 0, 0, 0.15);
+  background-color:rgba(0, 0, 0, 0.09);
   padding: 0 1rem;
   box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 35%);
   justify-content: center;
@@ -134,21 +137,22 @@ body {
 
 .navbar ul li {
   margin: -1rem 3rem -5rem -1rem;
-  padding: 1rem;
+  padding: .7rem;
  
 }
-
 .navbar ul li a {
   text-decoration: none;
-  text-transform: uppercase;
-  color: rgb(46, 29, 29);
-  font-family: 'Roboto', sans-serif;
+  color: rgb(0, 0, 0);
+  font-family: "Sono",'Roboto', sans-serif;
+  font-size:25px;
 }
 
 .navbar ul li a:hover {
-  color:rgb(255, 255, 255);
+  color:#F5F5F7;
   
 }
+
+
 
 section {
   display: flex;
@@ -163,7 +167,18 @@ section {
   /* Scroll Snap */
   scroll-snap-align: center;
 }
+@media only screen and (max-width: 600px) {
+  .navbar ul li {
+    margin: -1rem 3rem -5rem -2rem;
+    padding: .7rem;
+   
+  }
+  .navbar ul li a {
+    text-decoration: none;
+    font-size:20px;
+  }
 
+}
 
 
 

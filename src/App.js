@@ -1,35 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
-
+import anime from 'animejs/lib/anime.es.js';
 import {applyRouterMiddleware, BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
 import {  Link } from "react-scroll";
 import SubmitForm from './pages/SubmitForm'
 import Project from './pages/Project'
 import AboutMe from './pages/AboutMe'
-import styled, { createGlobalStyle } from "styled-components";
+import React, { useState, useEffect } from 'react';
 
 function App() {
   
   return (
-   
+    
     <div className="App">
    
      <nav class="navbar">
       <ul>
-          <li><a href="#home">About</a></li>
-          <li><a href="#about">Projects</a></li>
-          <li><a href="#service">Contact</a></li>
+          <li><a href="#about">.about</a></li>
+          <li><a href="#projects">.projects</a></li>
+          <li><a href="#contact">.contact</a></li>
         
         </ul>
       </nav>
-  <section id="home">
+  <section id="about">
     <AboutMe/>
   </section>
-  <section id="about">
+  <section id="projects">
       <Project/>
   </section>
-  <section id="service">
+  <section id="contact">
       <SubmitForm/>
   </section>
   
@@ -71,5 +71,6 @@ function App() {
     
   );
 }
+
 
 export default App;

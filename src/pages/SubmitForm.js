@@ -4,7 +4,7 @@ import "./SubmitForm.css";
 function SubmitForm({}) {
     return (
         <div className=" page submit-container">
-        <div className = "bubble3">
+        <div className = "page-bubble bubble3">
            <h2>Submit form</h2>
            </div>
             
