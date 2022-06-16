@@ -8,65 +8,52 @@ import SubmitForm from './pages/SubmitForm'
 import Project from './pages/Project'
 import AboutMe from './pages/AboutMe'
 import React, { useState, useEffect } from 'react';
+import { slide as Menu } from 'react-burger-menu';
+import Sidebar from './Sidebar';
 
 function App() {
-  
+  const useDeviceDetect = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+    const handleWindowResize = () => {
+        setWidth(window.innerWidth);
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowResize);
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        }
+    }, []);
+     
+    return (width <= 768);
+}
   return (
     
-    <div className="App">
-   
-     <nav class="navbar">
-      <ul>
-          <li><a href="#about">.about</a></li>
-          <li><a href="#projects">.projects</a></li>
-          <li><a href="#contact">.contact</a></li>
-        
-        </ul>
-      </nav>
-  <section id="about">
-    <AboutMe/>
-  </section>
-  <section id="projects">
-      <Project/>
-  </section>
-  <section id="contact">
-      <SubmitForm/>
-  </section>
   
-      {/* <header className="nav">
-       
-        <nav className="nav__container__actions">
+      
+        <div className="App" id="outer-container">
+      
+         {useDeviceDetect()?<Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />: <nav class="navbar">
           <ul>
-            <li>
-              <Link activeClass="active" smooth spy to="about">
-                ABOUT
-              </Link>
-            </li>
-            <li>
-              <Link activeClass="active" smooth spy to="projects">
-                PROJECTS
-              </Link>
-            </li>
-            <li>
-              <Link activeClass="active" smooth spy to="blog">
-                BLOG
-              </Link>
-            </li>
-            <li>
-              <Link activeClass="active" smooth spy to="contact">
-                CONTACT ME
-              </Link>
-            </li>
+            <li><a href="#about">.about</a></li>
+            <li><a href="#projects">.projects</a></li>
+            <li><a href="#contact">.contact</a></li>
+
           </ul>
-        </nav>
-        
-      </header>
-       
-      <section id="about"><AboutMe></AboutMe></section>
-      <section id="projects"><Project/></section>
-      <section id="blog"><SubmitForm/></section> */}
-     
-    </div>
+        </nav>}
+          <div id="page-wrap">
+          <section id="about">
+           <AboutMe />
+         </section>
+         <section id="projects">
+           <Project />
+         </section>
+         <section id="contact">
+           <SubmitForm />
+       </section>
+          </div>
+        </div>
+    
     
     
   );

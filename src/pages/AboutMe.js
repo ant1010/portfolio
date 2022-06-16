@@ -18,21 +18,27 @@ function AboutMe({}) {
             });
         });
     return (
-
+      
         <div className="page about-container">
+       <div className="ball"></div>
             <div className="page-bubble bubble">
 
                 <h1 class="ml6">
+                
+                    
+                        
+                   
                     <span class="text-wrapper">
-                        <span class="letters">Anthony Arreola</span>
+                    <span class="letter">Hi, I'm </span>
+                        <span class="letters"> Anthony Arreola</span>
                     </span>
                     <div className = "description-list">
                         <div className="description">
-                            <span >Hello, Im a web developer.</span>
+                            <span >I'm a web developer, die hard star trek fan, and friendly.</span>
                         </div>
                        
                         <div className="description text2">
-                            <span ></span>
+                            <span >I went to Colorado State University, and have a B.S in Computer Science</span>
                         </div>
                         <div className="description text3">
                             <span >Hello, Im a web developer</span>
