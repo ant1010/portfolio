@@ -41,6 +41,9 @@ app.post('/send', (req, res, next) => {
     subject: 'New Message from Contact Form',
     text: content
   }
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+  });
 
   transporter.sendMail(mail, (err, data) => {
     if (err) {
