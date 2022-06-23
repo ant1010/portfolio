@@ -1,0 +1,149 @@
+.about-container{
+    height:100vh;
+   z-index:-9999;
+    padding-top:7.5vh;
+    
+    background-color: white;
+   
+}
+@font-face {
+  font-family: "Sono";
+  src: 
+         
+         url('Sono-ExtraBold.woff2') format('woff2'); /* Modern Browsers */
+             font-style: normal;
+    font-weight:bold;
+    text-rendering: optimizeLegibility;
+
+  
+}
+
+.bubble{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left:5%;
+    height:90vh;
+    width:90vw;
+    border-radius: .1em;
+    background-color: #8CABBE60;
+    background-image: linear-gradient(180deg,#7FB06990, #7FB06990);
+    font-family: "Sono";
+    font-weight:200;
+    color:rgb(255, 255, 255);
+    font-size: 5em;
+}
+
+@font-face {
+  font-family: "SonoLight";
+  src: 
+         url('Sono-SansLight.woff2') format('woff2'); /* Modern Browsers */
+       
+             font-style: normal;
+    font-weight:light;
+    text-rendering: optimizeLegibility;
+
+  
+}
+
+.ml6 {
+  font-weight: 700;
+  font-size:clamp(12px, 4vw, 36px);
+  z-index:1;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.ml6 .text-wrapper {
+  z-index:2;
+  padding: 0.5em;
+  position: relative;
+  top:200px;
+  left:-20vw;
+  overflow: hidden;
+  height:8vw;
+  max-height:90px;
+  width:80vw;
+  max-width:800px;
+  border-radius:1rem;
+  background-color: #496A39;
+  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 35%);
+  -webkit-text-size-adjust: none;
+  text-size-adjust: auto;
+}
+
+.description{
+  position: relative;
+  padding:1em .5em .5em .5em;
+  font-family: "SonoLight";
+  color:black;
+  font-size:clamp(1px, 8vw, 40px);
+  display:block;
+  overflow: auto;
+  width:60vw;
+  background-color: #F4F8F2;
+  border-radius:1.5rem;
+  left:-5vw; top:20vh; 
+  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 /65%);
+  animation: mymove 4s;
+  animation-delay: 0s;
+  vertical-align: middle;
+}
+
+.text2{
+  color:white;
+  left:0vw; top:18vh; 
+  background-color: #65924F;
+  
+}
+.text3{
+  color:white;
+  left:5vw; top:16vh;
+  background-color:#2E4224;
+}
+.ball{
+  z-index:-1;
+  position: absolute;
+  border-radius:50em;
+  top:10vh;
+  left:20vw;
+  width:150px;
+  height:150px;
+  background-color: black;
+}
+@keyframes mymove {
+  from {left:0px;opacity:0; border-radius:0.5rem}
+  to {opacity:1;}
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+@media only screen and (max-width: 600px) {
+  .bubble{
+    height: 75vh;
+  }
+  .ml6 {
+   
+    font-weight: 700;
+    font-size: 2.rem;
+  }
+  .ml6 .text-wrapper {
+    height:10vh;
+    width:60vw; 
+  }
+  .description{
+     left:15vw; top:9vh;
+     font-size: 1.5rem;
+     height:5vh;
+     width:60vw;
+     padding-top:10px;
+   }
+   .text2{
+    left:15vw; top:20vh;
+   }
+   .text3{
+    left:15vw; top:30vh;
+   }
+}

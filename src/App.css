@@ -1,0 +1,189 @@
+/* .App {
+  text-align: center;
+  overflow-y: scroll; 
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -5px;
+  z-index: 2;
+  height: 70px;
+  min-height: 70px;
+  width: calc(100% );
+  background-color: #fff;
+  padding: 0 1rem;
+  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
+}
+section {
+  display: flex;
+  place-items: center;
+  height: 100vh;
+  scroll-snap-align: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+
+.nav__container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.nav__container__actions {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  padding-left: 50px;
+  flex: 1;
+}
+
+.active {
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  text-decoration: underline;
+} */
+@font-face {
+  font-family: "Sono";
+  src: 
+         url('pages/Sono-SansLight.woff2') format('woff2'), /* Modern Browsers */
+         url('pages/Sono-ExtraBold.woff2') format('woff2'); /* Modern Browsers */
+             font-style: normal;
+    font-weight:bold;
+    text-rendering: optimizeLegibility;
+
+  
+}
+
+body {
+ 
+  background:rgba(0, 0, 0, 0.15) ;
+  color: rgb(233, 104, 104);
+  height: 100vh;
+ 
+  
+}
+
+.page{
+  width:100vw;
+  
+
+}
+
+
+#root{
+  width: 100%;
+  height: 100%;
+  /* CSS Smooth Scroll */
+  overflow-y: scroll; 
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+ 
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color:rgba(0, 0, 0, 0.09);
+  padding: 0 1rem;
+  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 35%);
+  justify-content: center;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: -1rem 3rem -5rem -1rem;
+  padding: .7rem;
+ 
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: "Sono",'Roboto', sans-serif;
+  font-size:25px;
+}
+
+.navbar ul li a:hover {
+  color:#F5F5F7;
+  
+}
+
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  
+  position:relative;
+  
+  /* Scroll Snap */
+  scroll-snap-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .navbar ul li {
+    margin: -1rem 3rem -5rem -2rem;
+    padding: .7rem;
+   
+  }
+  .navbar ul li a {
+    text-decoration: none;
+    font-size:20px;
+  }
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#page-wrap {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}

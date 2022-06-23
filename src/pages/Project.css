@@ -1,0 +1,27 @@
+
+.project-container{
+    height:100vh;
+    
+    
+    background-color: white;
+    
+  
+    padding-top:7.5vh;
+}
+.bubble2{
+    position: absolute;
+    left:5%;
+    height:90vh;
+    width:90vw;
+    border-radius: 1em;
+    background-color: #9D858D;
+    background-image: linear-gradient(180deg,#ECE4B7,#ECE4B7);
+    
+   
+}
+@media only screen and (max-width: 600px) {
+    .bubble2{
+      height: 75vh;
+    }
+  
+  }
