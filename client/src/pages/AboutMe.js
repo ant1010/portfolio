@@ -1,0 +1,55 @@
+import "./AboutMe.css";
+import anime from 'animejs/lib/anime.es.js';
+import React, { useState, useEffect } from 'react';
+function AboutMe({}) {
+    
+        useEffect(() => {
+          var textWrapper = document.querySelector('.ml6 .letters');
+       
+          textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+          
+          anime.timeline({})
+            .add({
+              targets: '.ml6 .letter',
+              translateY: ["1.9em", 0],
+              translateZ: 0,
+              duration: 1550,
+              delay: (el, i) => 70 * i
+            });
+        });
+    return (
+      
+        <div className="page about-container">
+       <div className="ball"></div>
+            <div className="page-bubble bubble">
+
+                <div class="ml6">
+                
+                    <div className = "description-list">
+                     <span className="description letters">Hi, Im Anthony Arreola</span>
+                        <div className="description">
+                            <span >I'm a web developer, die hard star trek fan, and friendly.</span>
+                        </div>
+                       
+                        <div className="description text2">
+                            <span >I went to Colorado State University, and have a B.S in Computer Science</span>
+                        </div>
+                        <div className="description text3">
+                            <span >I like Javascript and working with React.</span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+            </div>
+
+        </div>
+
+
+    )
+}
+
+export default AboutMe;
