@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 function AboutMe({}) {
     
         useEffect(() => {
+           
           var textWrapper = document.querySelector('.ml6 .letters');
        
           textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -23,19 +24,19 @@ function AboutMe({}) {
        <div className="ball"></div>
             <div className="page-bubble bubble">
 
-                <div class="ml6">
+                <div className="ml6">
                 
                     <div className = "description-list">
-                     <span className="description letters">Hi, Im Anthony Arreola</span>
-                        <div className="description">
-                            <span >I'm a web developer, die hard star trek fan, and friendly.</span>
+                     <span className="description letters">(I'm a Web Developer</span>
+                        <div className="description ">
+                            <span >&& I seek new experiences in fast paced environments.</span>
                         </div>
                        
                         <div className="description text2">
-                            <span >I went to Colorado State University, and have a B.S in Computer Science</span>
+                            <span > && I went to Colorado State University.<br></br> (B.S in Computer Science).</span>
                         </div>
                         <div className="description text3">
-                            <span >I like Javascript and working with React.</span>
+                            <span > && I love Javascript and working with React.) </span>
                         </div>
                         
                     </div>
@@ -45,7 +46,13 @@ function AboutMe({}) {
 
 
             </div>
+            <div class="arrow">
+            <a>swipe/scroll</a>
+                <span></span>
+                <span></span>
+                <span></span>
 
+            </div>
         </div>
 
 

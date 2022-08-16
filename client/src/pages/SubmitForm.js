@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import "./SubmitForm.css";
-
+import ButtonLoader from "./ButtonLoader";
 function SubmitForm({}) {
     
     const [form,setForm] = useState({
@@ -25,7 +25,7 @@ function SubmitForm({}) {
         event.preventDefault();
         
         console.log(JSON.stringify(form));
-        console.log("heek");
+        fetchData();
         fetch('/send', {
             method: "POST",
             body: JSON.stringify(form),
@@ -38,32 +38,59 @@ function SubmitForm({}) {
             ).then((response)=> {
           if (response.status === 'success') {
             alert("Message Sent.");
-            this.resetForm()
+            resetForm();
+            fetchData();
           } else if(response.status === 'fail') {
             alert("Message failed to send.")
           }
         })
       }
+      function resetForm(){
+          setForm({...form,name:"",email:"",message:""});
+      }
+      const [loading,setLoading] = useState(false);
+      function fetchData (){
+        setLoading( !loading );
+    
+        //Faking API call here
+        setTimeout(() => {
+          setLoading( false );
+        }, 2000);
+      };
     return (
         <div className=" page submit-container">
+        
         <div className = "page-bubble bubble3">
-                <h2>Submit form</h2>
+                <h2>Contact Me</h2>
                 <form id="contact-form" method="POST" onSubmit = {handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="name">Name</label>
-                        <input type="text" className="form-control" onChange = {onNameChange}/>
+                        <input type="text" className="form-control name" placeholder = "Name.."value ={form.name}onChange = {onNameChange}/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="exampleInputEmail1">Email address</label>
-                        <input type="email" className="form-control" onChange = {onEmailChange}aria-describedby="emailHelp" />
+                        <input type="email" className="form-control email" placeholder = "Email.." value ={form.email}onChange = {onEmailChange}aria-describedby="emailHelp" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="message">Message</label>
-                        <textarea className="form-control" rows="5" onChange = {onMessageChange}></textarea>
+                        <textarea className="form-control message" rows="5" placeholder = "Message.." value ={form.message} onChange = {onMessageChange}></textarea>
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    
+                    <button  type="submit" className="submit" disabled={loading}>
+          {loading && (
+            <i
+              className="fa fa-refresh fa-spin"
+              style={{ marginRight: "5px" }}
+            />
+          )}
+          {loading && <span>Sending...</span>}
+          {!loading && <span>Submit</span>}
+        </button>
+                    
                 </form>
+                 
            </div>
+          
             
         </div>
             
