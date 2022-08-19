@@ -24,19 +24,19 @@ function AboutMe({}) {
        <div className="ball"></div>
             <div className="page-bubble bubble">
 
-                <div className="ml6">
+                 <div className="ml6">
                 
                     <div className = "description-list">
-                     <span className="description letters">(I'm a Web Developer</span>
+                     <div className="description letters">I'm a Web Developer,</div>
                         <div className="description ">
-                            <span >&& I seek new experiences in fast paced environments.</span>
+                            <span >&& I went to Colorado State University.<br></br> (B.S in Computer Science.)</span>
                         </div>
                        
                         <div className="description text2">
-                            <span > && I went to Colorado State University.<br></br> (B.S in Computer Science).</span>
+                            <span > && I seek new experiences in fast paced environments.</span>
                         </div>
                         <div className="description text3">
-                            <span > && I love Javascript and working with React.) </span>
+                            <span > && I like Javascript and working with React. </span>
                         </div>
                         
                     </div>

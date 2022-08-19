@@ -21,17 +21,21 @@
     
    
 }
+.home-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .hello{
     position: relative;
-    font-size: 4rem;
-    left:15vw;
-    top:-40vh;
+    font-size: 3rem;
+    top:-10vh;
+    
 }
 .portrait{
   position: relative;
-  height:60vh;
-  top:5vh;
-  left:-20vw;
+  height:35vh;
+ 
 }
 @media only screen and (max-width: 600px) {
     .bubble4{
