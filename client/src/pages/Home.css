@@ -1,11 +1,11 @@
 .home-container{
     height:100vh;
     
-   z-index:0;
-    background-color: rgb(0, 0, 0);
+    z-index:0;
+    background-color: black;
     
   
-    padding-top:7.5vh;
+    padding-bottom:7.5vh;
 }
 .bubble4{
     display: flex;
@@ -16,7 +16,7 @@
     height:80vh;
     width:90vw;
     border-radius: 1em;
-    background-color: rgb(0, 0, 0);
+    background-color: transparent;
    
     
    
@@ -37,6 +37,56 @@
   height:35vh;
  
 }
+.arrow{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:90vh;
+
+    
+    z-index:0;
+}
+.arrow span{
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-top: 2px solid rgba(231, 163, 15, 0.767);
+    border-left: 2px solid rgba(206, 124, 31, 0.541);
+    transform: rotate(45deg);
+    margin: -60px;
+    animation: animate 3s infinite;
+}
+.arrow a{
+    position: absolute;
+    text-align: center;
+   
+    color: rgba(250, 234, 214, 0.452);
+    
+}
+.arrow span:nth-child(0){
+    animation-delay: -2s;
+}
+.arrow span:nth-child(1){
+    animation-delay: -0s;
+}
+.arrow span:nth-child(2){
+    animation-delay:-6s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(40px,40px);
+    }
+    50%{
+        opacity: .6;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(5px,5px);
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .bubble4{
       height: 75vh;
@@ -44,48 +94,15 @@
     .portrait{
         height:30vh;
     }
-  }
-  .arrow{
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%,90%);
-    z-index:0;
-}
-.arrow span{
-    display: block;
-    width: 80px;
-    height: 80px;
-    border-top: 3px solid rgba(231, 163, 15, 0.363);
-    border-left: 3px solid rgba(206, 124, 31, 0.445);
-    transform: rotate(45deg);
-    margin: -45px;
-    animation: animate 7s infinite;
-}
-.arrow a{
-    position: absolute;
-    top: -150%;
-    left: 50%;
-    transform: translate(-59%,40%);
-    color: rgba(255, 228, 196, 0.493);
+    .arrow{
+   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:75vh;
     
-}
-.arrow span:nth-child(2){
-    animation-delay: -1.6s;
-}
-.arrow span:nth-child(3){
-    animation-delay: -.8s;
-}
-@keyframes animate {
-    0%{
-        opacity: 0;
-        transform: rotate(45deg) translate(20px,20px);
+        
+        z-index:0;
     }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        transform: rotate(45deg) translate(-20px,-20px);
-    }
-}
+  }
+ 

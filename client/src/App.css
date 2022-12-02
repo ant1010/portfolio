@@ -1,82 +1,4 @@
-/* .App {
-  text-align: center;
-  overflow-y: scroll; 
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-
-
-.App-link {
-  color: #61dafb;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  position: -webkit-sticky;
-  position: sticky;
-  top: -5px;
-  z-index: 2;
-  height: 70px;
-  min-height: 70px;
-  width: calc(100% );
-  background-color: #fff;
-  padding: 0 1rem;
-  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
-}
-section {
-  display: flex;
-  place-items: center;
-  height: 100vh;
-  scroll-snap-align: center;
-  font-size: 32px;
-  font-weight: bold;
-}
-
-
-.nav__container {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-
-.nav__container__actions {
-  display: inline-flex;
-  flex-flow: row nowrap;
-  padding-left: 50px;
-  flex: 1;
-}
-
-.active {
-  font-weight: bold;
-}
-
-ul {
-  display: flex;
-  gap: 1rem;
-  font-size: 0.9rem;
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  cursor: pointer;
-}
-
-li:hover {
-  text-decoration: underline;
-} */
 @font-face {
   font-family: "Sono";
   src: 
@@ -91,16 +13,15 @@ li:hover {
 
 body {
   
-  background:rgba(0, 0, 0, 0.15) ;
+  background-color:black;
   color: rgb(233, 104, 104);
   height:100vh;
   
 }
 
 .page{
-  width:100vw;
+  width:80vw;
   
-
 }
 
 
@@ -112,7 +33,44 @@ body {
   scroll-snap-type: y mandatory;
   
 }
-
+.ball{
+  z-index:0;
+  position: absolute;
+  
+  border-radius:50em;
+  top:10vh;
+  left:42vw;
+  width:15vw;
+  height:15vw;
+  background-color: rgb(255, 159, 104);
+  animation: bounce 5s infinite;
+}
+@keyframes bounce{
+  10%{
+    height:15.5vw;
+    width:15vw;
+    
+  }
+  30%{
+    height:15.5vw;
+    width:15vw;;
+  }
+  50%{
+    height:13.5vw;
+    width:15.9vw;;
+    transform: translateY(60.2vh);
+  }
+  75%{
+    height: 15.5vw;
+    width: 14vw;
+   
+  }
+  100%{
+    height:15.5vw;
+    width:15vw;
+    transform: translateY(0vh);
+  }
+}
 
 .navbar {
   position: fixed;
@@ -151,7 +109,7 @@ body {
   
 }
 #page-wrap{
-  background-color: aqua;
+  background-color: transparent;
   
 }
 
@@ -185,8 +143,3 @@ section {
   box-sizing: border-box;
 }
 
-#page-wrap {
-  
-  background-color: rgb(255, 255, 255);
-  
-}

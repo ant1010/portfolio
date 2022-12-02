@@ -64,15 +64,15 @@ function SubmitForm({}) {
                 <h2>Contact Me</h2>
                 <form id="contact-form" method="POST" onSubmit = {handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="name">Name</label>
+                        <label className = "label" htmlFor="name">Name</label>
                         <input type="text" className="form-control name" placeholder = "Name.."value ={form.name}onChange = {onNameChange}/>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="exampleInputEmail1">Email address</label>
+                        <label className = "label" htmlFor="exampleInputEmail1">Email address</label>
                         <input type="email" className="form-control email" placeholder = "Email.." value ={form.email}onChange = {onEmailChange}aria-describedby="emailHelp" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="message">Message</label>
+                        <label className = "label" htmlFor="message">Message</label>
                         <textarea className="form-control message" rows="5" placeholder = "Message.." value ={form.message} onChange = {onMessageChange}></textarea>
                     </div>
                     

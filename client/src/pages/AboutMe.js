@@ -21,12 +21,12 @@ function AboutMe({}) {
     return (
       
         <div className="page about-container">
-       <div className="ball"></div>
+      
             <div className="page-bubble bubble">
 
                  <div className="ml6">
                 
-                    <div className = "description-list">
+                    <div className = "description-list about">
                      <div className="description letters">I'm a Web Developer,</div>
                         <div className="description ">
                             <span >&& I went to Colorado State University.<br></br> (B.S in Computer Science.)</span>
@@ -48,6 +48,8 @@ function AboutMe({}) {
             </div>
             <div class="arrow">
             <a>swipe/scroll</a>
+               
+                <span></span>
                 <span></span>
                 <span></span>
                 <span></span>

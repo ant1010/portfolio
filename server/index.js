@@ -42,7 +42,7 @@ app.post('/send', (req, res, next) => {
     text: content
   }
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, '../client/public', 'index.html'));
   });
 
   transporter.sendMail(mail, (err, data) => {
