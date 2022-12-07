@@ -30,8 +30,7 @@ function SubmitForm({}) {
             method: "POST",
             body: JSON.stringify(form),
             headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
+              
             },
           }).then(
           (response) => (response.json())
