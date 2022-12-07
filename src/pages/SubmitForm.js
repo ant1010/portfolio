@@ -26,7 +26,7 @@ function SubmitForm({}) {
         
         console.log(JSON.stringify(form));
         fetchData();
-        fetch('/send', {
+        fetch('/api/send', {
             method: "POST",
             body: JSON.stringify(form),
             headers: {
