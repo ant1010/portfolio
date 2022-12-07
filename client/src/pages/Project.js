@@ -6,7 +6,9 @@ function Project({img,title,description}) {
     return (
         <div className="page project-container">
             <div className="page-bubble bubble2">
+             <div className ="header">Project</div>
                 <div >
+               
                      <img className ="gif" src={img} />
 
                     <div className="description-list project">

@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.1528172f.css",
-    "main.js": "/static/js/main.eaf63e08.js",
+    "main.css": "/static/css/main.5a1a1b1e.css",
+    "main.js": "/static/js/main.c8bea0e5.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/pathgif.gif": "/static/media/pathgif.1cda3c9f595e9e8a7313.gif",
+    "static/media/spotify.gif": "/static/media/spotify.6e74188d0b21723a5ebe.gif",
+    "static/media/snake.gif": "/static/media/snake.26367bf1970519aa2f70.gif",
     "static/media/folio-portrait.GIF": "/static/media/folio-portrait.37bdb59277a1c12305f2.GIF",
     "static/media/Sono-SansLight.woff2": "/static/media/Sono-SansLight.9c77509ea4050044f953.woff2",
     "static/media/Sono-ExtraBold.woff2": "/static/media/Sono-ExtraBold.2d09764798998a24bf8a.woff2",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.1528172f.css.map": "/static/css/main.1528172f.css.map",
-    "main.eaf63e08.js.map": "/static/js/main.eaf63e08.js.map",
+    "main.5a1a1b1e.css.map": "/static/css/main.5a1a1b1e.css.map",
+    "main.c8bea0e5.js.map": "/static/js/main.c8bea0e5.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1528172f.css",
-    "static/js/main.eaf63e08.js"
+    "static/css/main.5a1a1b1e.css",
+    "static/js/main.c8bea0e5.js"
   ]
 }

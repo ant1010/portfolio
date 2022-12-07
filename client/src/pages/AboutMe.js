@@ -21,11 +21,12 @@ function AboutMe({}) {
     return (
       
         <div className="page about-container">
-      
+            
             <div className="page-bubble bubble">
-
+               
                  <div className="ml6">
-                
+                 <div className ="header">About Me</div>
+                 
                     <div className = "description-list about">
                      <div className="description letters">I'm a Web Developer,</div>
                         <div className="description ">
