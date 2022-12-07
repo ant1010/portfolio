@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 function AboutMe({}) {
     
         useEffect(() => {
-           
           var textWrapper = document.querySelector('.ml6 .letters');
        
           textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -21,41 +20,38 @@ function AboutMe({}) {
     return (
       
         <div className="page about-container">
-            
+       <div className="ball"></div>
             <div className="page-bubble bubble">
-               
-                 <div className="ml6">
-                 <div className ="header">About Me</div>
-                 
-                    <div className = "description-list about">
-                     <div className="description letters">I'm a Web Developer,</div>
-                        <div className="description ">
-                            <span >&& I went to Colorado State University.<br></br> (B.S in Computer Science.)</span>
+
+                <h1 class="ml6">
+                
+                    
+                        
+                   
+                    <span class="text-wrapper">
+                    <span class="letter">Hi, I'm </span>
+                        <span class="letters"> Anthony Arreola</span>
+                    </span>
+                    <div className = "description-list">
+                        <div className="description">
+                            <span >I'm a web developer, die hard star trek fan, and friendly.</span>
                         </div>
                        
                         <div className="description text2">
-                            <span > && I seek new experiences in fast paced environments.</span>
+                            <span >I went to Colorado State University, and have a B.S in Computer Science</span>
                         </div>
                         <div className="description text3">
-                            <span > && I like Javascript and working with React. </span>
+                            <span >Hello, Im a web developer</span>
                         </div>
                         
                     </div>
-                </div>
+                </h1>
 
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 
             </div>
-            <div class="arrow">
-            <a>swipe/scroll</a>
-               
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
 
-            </div>
         </div>
 
 

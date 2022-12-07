@@ -1,15 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
-import anime from 'animejs/lib/anime.es.js';
 import {applyRouterMiddleware, BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
-import {  Link } from "react-scroll";
 import SubmitForm from './pages/SubmitForm'
 import Project from './pages/Project'
 import AboutMe from './pages/AboutMe'
-import React, { useState, useEffect } from 'react';
-import { slide as Menu } from 'react-burger-menu';
+import Home from './pages/Home'
+import snake from "./pages/images/snake.gif"
+import pathfinder from "./pages/images/pathgif.gif"
+import spotify from "./pages/images/spotify.gif"
+import React, {useLayoutEffect, useRef, useState, useEffect } from 'react';
+
 import Sidebar from './Sidebar';
+
+
+
 
 function App() {
   const useDeviceDetect = () => {
@@ -20,43 +24,87 @@ function App() {
 
     useEffect(() => {
         window.addEventListener('resize', handleWindowResize);
+       
         return () => {
             window.removeEventListener('resize', handleWindowResize);
         }
     }, []);
-     
+    
     return (width <= 768);
 }
+
+
+
+
   return (
     
   
       
-        <div className="App" id="outer-container">
-      
-         {useDeviceDetect()?<Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />: <nav class="navbar">
+        <div className="App" >
+       
+         {useDeviceDetect()?<Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />: <nav className="navbar">
           <ul>
+            <li><a href="#home">.home</a></li>
             <li><a href="#about">.about</a></li>
             <li><a href="#projects">.projects</a></li>
             <li><a href="#contact">.contact</a></li>
 
           </ul>
         </nav>}
-          <div id="page-wrap">
-          <section id="about">
-           <AboutMe />
-         </section>
+       
+          <div id="page-wrap" >
+       
+          <div className="ball"></div>
+          
+           <section id="home">
+              <Home />
+
+               </section>
+          
+          
+             
+      
+          
+         
+          <section id="about" >
+             <AboutMe />
+           
+              </section>
+          
+          
+        
+         
+       
          <section id="projects">
-           <Project />
-         </section>
-         <section id="contact">
-           <SubmitForm />
-       </section>
+            <Project img = {snake} title = "Snake Game" description = "A version of the original classic. Built using javaScript and Node"/>
+           
+            </section>
+            <section id="projects">
+            <Project img = {pathfinder}title = "Pathfinder Visualizer" description = "A tool to help visualize common pathfinding algorithms like A-star. Built using react"/>
+           
+            </section>
+            <section id="projects">
+            <Project img = {spotify} title = "Spotify Tool" description ="A Spotify clone that features a useful tool. Create a large playlist in one swoop. This was built using React and Spotify's own API."/>
+           
+            </section>
+         
+      
+      
+          <section id="contact">
+            <SubmitForm />  
+          </section>
+        
+        
+ 
+
           </div>
+         
         </div>
     
     
     
   );
+  
 }
 
 

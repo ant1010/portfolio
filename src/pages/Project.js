@@ -2,21 +2,38 @@ import React from 'react'
 import "./Project.css";
 
 
-function Project({}) {
+function Project({img,title,description}) {
     return (
         <div className="page project-container">
-        <div className = "page-bubble bubble2">
-           <div className = "inner-container">
-             <div className = "slide one">Project one</div>
-             <div className = "slide two">Project two</div>
-             <div className = "slide three">Project three</div>
+            <div className="page-bubble bubble2">
+             <div className ="header">Project</div>
+                <div >
+               
+                     <img className ="gif" src={img} />
+
+                    <div className="description-list project">
+                        
+                       
+                        <div className = "project title">{title}</div>
+                        <div className = "project description">{description}</div>
+                       
+
+
+                    </div>
+                </div>
+
             </div>
-           </div>
-           
-           
+            <div class="arrow">
+                <a>swipe/scroll</a>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
         </div>
-            
-      
+
+
     )
 }
 
