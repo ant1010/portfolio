@@ -2,7 +2,7 @@ import React from 'react'
 import "./Project.css";
 
 
-function Project({img,title,description}) {
+function Project({img,title,description,link}) {
     return (
         <div className="page project-container">
             <div className="page-bubble bubble2">
@@ -16,7 +16,7 @@ function Project({img,title,description}) {
                        
                         <div className = "project title">{title}</div>
                         <div className = "project description">{description}</div>
-                       
+                        <a href = {link} target="_blank"><button className = "link">visit project</button></a>
 
 
                     </div>

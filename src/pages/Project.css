@@ -40,7 +40,22 @@
  color:rgb(230, 220, 220);
  font-size:1em;
 }
-
+.link{
+  font-family: "Kanit", sans-serif;
+  width:20vw;
+  border: 2px solid rgb(255, 159, 104);
+  background: transparent;
+  color:rgb(255, 255, 255);
+  font-size: 1.5vh;
+  margin-top:5px;
+  border-radius:10px;
+}
+.link:hover{
+  background: rgb(255, 159, 104);
+  color:black;
+  width:19.8vw;
+  font-size:1.6vh;
+}
 @media only screen and (max-width: 600px) {
   .bubble2 {
     height: 75vh;

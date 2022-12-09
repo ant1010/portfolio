@@ -63,10 +63,10 @@ h2{
 }
 
 .submit {
-  background-color: #e05311; /* Green */
-  border: none;
+  background-color: rgb(255, 159, 104);
+  border:2px solid black;
   border-radius: .5rem;
-  color: white;
+  color: black;
   padding: 1px 3px;
   text-align: center;
   text-decoration: none;
@@ -80,6 +80,11 @@ h2{
 }
 .submit:disabled {
   opacity: 0.5;
+}
+.submit:hover{
+  background-color:black;
+  border: 2px solid rgb(255, 159, 104);
+  color:white;
 }
 @media only screen and (max-width: 600px) {
   .bubble3{
