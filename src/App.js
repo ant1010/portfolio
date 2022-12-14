@@ -76,15 +76,15 @@ function App() {
          
        
          <section id="projects">
-            <Project img = {snake} title = "Snake Game" description = "A version of the original classic. Built using javaScript and Node"/>
+            <Project img = {snake} title = "Snake Game" link = {""}description = "A version of the original classic. Built using javaScript and Node"/>
            
             </section>
             <section id="projects">
-            <Project img = {pathfinder}title = "Pathfinder Visualizer" description = "A tool to help visualize common pathfinding algorithms like A-star. Built using react"/>
+            <Project img = {pathfinder}title = "Pathfinder Visualizer" link = {"https://pathfinder-visualizer-theta.vercel.app/"}description = "A tool to help visualize common pathfinding algorithms like A-star. Built using react"/>
            
             </section>
             <section id="projects">
-            <Project img = {spotify} title = "Spotify Tool" description ="A Spotify clone that features a useful tool. Create a large playlist in one swoop. This was built using React and Spotify's own API."/>
+            <Project img = {spotify} title = "Spotify Tool" link = {"https://my-spotify-tool.vercel.app/"}description ="A Spotify clone that features a useful tool. Create a large playlist in one swoop. This was built using React and Spotify's own API."/>
            
             </section>
          
