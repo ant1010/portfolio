@@ -50,7 +50,7 @@
 }
 
 .ml6 {
-  font-size: clamp(12px, 3vw, 36px);
+  font-size: clamp(20px, 3vw, 36px);
   display: flex;
   justify-content: center;
   align-items: center;

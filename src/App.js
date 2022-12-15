@@ -76,7 +76,7 @@ function App() {
          
        
          <section id="projects">
-            <Project img = {snake} title = "Snake Game" link = {""}description = "A version of the original classic. Built using javaScript and Node"/>
+            <Project img = {snake} title = "Snake Game" link = {"https://snake-with-javascript.vercel.app/"}description = "A version of the original classic. Built using javaScript and Node"/>
            
             </section>
             <section id="projects">

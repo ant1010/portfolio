@@ -22,7 +22,7 @@
    
 }
 .home-container{
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
 }
@@ -36,6 +36,28 @@
   position: relative;
   height:35vh;
  
+}
+.git-logo{
+   position: relative;
+   display: grid;
+   align-content: center;
+   justify-content: center;
+   z-index:4;
+   top:-20vh;
+   color:white;
+}
+
+.git-img{
+    border: 2px solid black;
+   border-radius:50%;
+   
+}
+.git-img:hover{
+    border: 2px solid white;
+}
+.git-img:active{
+    width:97%;
+    border: 3px solid rgb(0, 0, 0);
 }
 .arrow{
    
